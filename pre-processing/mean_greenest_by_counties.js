@@ -46,8 +46,15 @@ var greenest_mean = greenest.reduceRegions({
   scale: 30,
 });
 
-//Plot the resulting shapefile
+var greenest_median = greenest.reduceRegions({
+  collection: counties,
+  reducer: ee.Reducer.median(),
+  scale: 30,
+});
+
+//Plot the resulting shapefiles
 Map.addLayer(greenest_mean);
+Map.addLayer(greenest_median);
 
 //Export to drive
 Export.table.toDrive({
@@ -56,3 +63,8 @@ Export.table.toDrive({
   fileFormat: 'KML'
 });
 
+Export.table.toDrive({
+  collection: greenest_median,
+  description:'greenest_median',
+  fileFormat: 'KML'
+});
