@@ -6,3 +6,4 @@
 ## Scripts
 - `download_climate.js`: GEE script to download TERRACLIMATE data.
 - `group_pop_by_county.ipynb`: group population data by counties.
+- `mean_greenest_by_counties.js`: take the mean greenest by counties using NDVI in GEE.
