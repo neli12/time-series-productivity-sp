@@ -5,3 +5,4 @@
 
 ## Scripts
 - `download_climate.js`: GEE script to download TERRACLIMATE data.
+- `group_pop_by_county.ipynb`: group population data by counties.
