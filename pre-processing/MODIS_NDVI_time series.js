@@ -3,23 +3,19 @@
 //Load MODIS collection and select the NDVI band
 var NDVI = ee.ImageCollection('MODIS/006/MOD13A1')
              .select('NDVI')
+             .filterDate("2000-01-01", "2020-12-31")
              .filterBounds(geometry);
 
 //Create two list for months and years
-var months = ee.List.sequence(1, 12);
-var years = ee.List.sequence(2016, 2020);
+var years = ee.List.sequence(2000, 2020);
 
 // Map filtering and reducing across year-month combinations and convert to ImageCollection
 var yrMo = ee.ImageCollection.fromImages(
   years.map(function (y) {
-        return months.map(function (m) {
             return NDVI
               .filter(ee.Filter.calendarRange(y, y, 'year'))
-              .filter(ee.Filter.calendarRange(m, m, 'month'))
               .mean()
               .set('year',y)
-              .set('month',m);
-        });
     }).flatten());
 print("yrMo",yrMo);
 
@@ -35,6 +31,6 @@ print(NDVI_image);
 
 //Export image to Drive
 Export.image.toDrive({image: NDVI_image,
-                      description: 'NDVI_2016-2020',
+                      description: 'NDVI_2000-2020',
                       region: geometry,
                       crs: 'EPSG:4326'})
