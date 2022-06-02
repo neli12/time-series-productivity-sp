@@ -1,7 +1,12 @@
 ## Preprocessing of climatic and remote sensing data
 
 ## Scripts
-- `download_climate.js`: GEE script to download TERRACLIMATE data.
+- `download_climate.js`: GEE script to download TERRACLIMATE data. I used the following variables:
+    - tmmx: maximum temperature
+    - tmin: minimum temperature
+    - soil: soil moisture
+    - aet: actual evapotranspiration
+    - pr: precipitation accumulation
 - `group_pop_by_county.ipynb`: group population data by counties, script in Python.
 - `mean_greenest_by_counties.js`: take the mean greenest by counties using NDVI in GEE.
 - `script_group_by_county.R`: group population by counties, script in R
