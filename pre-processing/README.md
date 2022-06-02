@@ -8,5 +8,5 @@
     - aet: actual evapotranspiration
     - pr: precipitation accumulation
 - `MODIS_NDVI_time series.js`: download NDVI time series from MODIS in GEE. 
-- `LST time series.js`: download NDVI time series from MODIS in GEE. 
+- `LST_MODIS.js`: download LST time series from MODIS in GEE. 
 - `script_zonal_statistics.R`: calculate mean raster values inside a polygon from multiple rasters.
