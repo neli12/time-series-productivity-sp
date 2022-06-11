@@ -1,4 +1,10 @@
-# load the shiny package
+##########################################################################################
+## Shiny app for plotting and visualizing historical sugarcane data in São Paulo cities ##
+##########################################################################################
+
+## Note: This code was adapted from: https://www.paulamoraga.com/book-geospatial/sec-shinyexample.html
+
+# Load libraries
 library(shiny)
 library(rgdal)
 library(DT)
@@ -8,16 +14,14 @@ library(leaflet)
 library(raster)
 library(leaflet)
 
-# in ui
 
-
-# in server()
+# Load datasets
 data <- read.csv("data/all_data.csv", sep = ';')
-summary(data)
 map <- readOGR("data/shapefile/SP_Municipios_2021_encoding.shp", encoding =  'UTF-8')
 
+# Create ui
 ui <- fluidPage(
-  titlePanel(p("Time series sugarcane yield in S�o Paulo",
+  titlePanel(p("Time series sugarcane yield in São Paulo",
                style = "color:#3474A7")),
   
   fluidRow(
@@ -48,9 +52,7 @@ ui <- fluidPage(
 )
 
 
-
-
-# server()
+# Create server 
 server <- function(input, output) {
   output$table <- renderDT(data)
   
@@ -111,7 +113,7 @@ server <- function(input, output) {
   })
 }
 
-# shinyApp()
+# Run the app
 shinyApp(ui = ui, server = server)
 
 
