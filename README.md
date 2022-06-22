@@ -7,4 +7,4 @@ The first steps consisted in gathering all the necessary data. Yield, productivi
 
 All the data for each county is stored in the all_data csv file. With this file, I am running some data exploratory data analysis. You can find more in the script `Time series yield EDA.ipynb`. After analyzing some data, I came with the figure below, which display the average and standard deviation of sugarcane yield over the years (20) years.
 
-![yield data]([https://github.com/neli12/time-series-productivity-sp/blob/main/plot_average_st_yield_ii.png])
+![yield data](https://github.com/neli12/time-series-productivity-sp/blob/main/plot_average_st_yield_ii.png)
