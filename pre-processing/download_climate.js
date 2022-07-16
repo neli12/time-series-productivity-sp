@@ -1,6 +1,6 @@
 // Load image collection from TERRACLIMATE
 var dataset = ee.ImageCollection('IDAHO_EPSCOR/TERRACLIMATE')
-                  .filter(ee.Filter.date('2000-01-01', '2020-12-31'))
+                  .filter(ee.Filter.date('2000-01-01', '2021-12-31'))
                   .filterBounds(geometry);                 
 print(dataset);
                   
@@ -11,7 +11,7 @@ var pr = dataset.select('pr');
 var soil = dataset.select('soil');
 
 //Create a list of years
-var years = ee.List.sequence(2000, 2020);
+var years = ee.List.sequence(2000, 2021);
 
 // Map filtering and reducing across year-month combinations and convert to ImageCollection
 // T max
