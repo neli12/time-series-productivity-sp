@@ -1,6 +1,6 @@
 //Load and filter collection
 var LST = ee.ImageCollection('MODIS/061/MOD11A1')
-                  .filter(ee.Filter.date('2000-01-01', '2020-12-31'))
+                  .filter(ee.Filter.date('2000-01-01', '2021-12-31'))
                   .filterBounds(geometry)
                   .select('LST_Day_1km');
 print(LST);
@@ -18,7 +18,7 @@ var LST_vis = {min: 13000.0, max: 16500.0, palette: [
 Map.addLayer(LST, LST_vis, 'Land Surface Temperature');
     
 //Create two list for months and years
-var years = ee.List.sequence(2016, 2020);
+var years = ee.List.sequence(2000, 2021);
 
 // Map filtering and reducing across year-month combinations and convert to ImageCollection
 var yrMo = ee.ImageCollection.fromImages(
@@ -38,6 +38,6 @@ print(LST_clip);
 
 //Export image to Drive
 Export.image.toDrive({image: LST_clip,
-                      description: 'LST_2000-2001',
+                      description: 'LST_2000-2021',
                       region: geometry,
                       crs: 'EPSG:4326'})
