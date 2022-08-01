@@ -1,6 +1,6 @@
 <img src = "https://img.shields.io/github/last-commit/neli12/time-series-productivity-sp"> <img src = "https://img.shields.io/github/languages/count/neli12/time-series-productivity-sp"> <img src = "https://img.shields.io/github/license/neli12/time-series-productivity-sp?color=green"> <img src = "https://img.shields.io/github/watchers/neli12/time-series-productivity-sp?style=social">
 
-# Prediction of sugarcane productivity in the municipalities of the State of São Paulo
+# Prediction of sugarcane productivity in the State of São Paulo
 
 For a description in portuguese, see the README_pt.md file.
 
