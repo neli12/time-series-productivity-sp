@@ -5,7 +5,7 @@
 ## Note: This code was adapted from: https://www.paulamoraga.com/book-geospatial/sec-shinyexample.html
 
 # Load libraries
-library(shiny)
+library(shiny))
 library(rgdal)
 library(DT)
 library(dygraphs)
