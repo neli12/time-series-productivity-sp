@@ -12,4 +12,4 @@ The file `Data analysis and cleaning.ipynb` is the code I used to load and proce
 
 My results demonstrated that the panel data analysis was not satisfactory to estimate historical and future sugarcane yields while the Gradient Boosting showed the best performance (see the figures below). I concluded that future works should focus on using environmental covariates of specific months to figure it out at which point of time would be better to use the variables (specially from remote sensing) to avoid averaging over a year, which seems to negatively impact the relationship with the sugarcane yield.
 
-![yield data](https://github.com/neli12/time-series-productivity-sp/figures/blob/main/F5.png)
+![yield data](https://github.com/neli12/time-series-productivity-sp/blob/main/figures/F5.jpg)
