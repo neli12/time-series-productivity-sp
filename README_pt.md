@@ -1,7 +1,7 @@
 
 <img src = "https://img.shields.io/github/last-commit/neli12/time-series-productivity-sp"> <img src = "https://img.shields.io/github/languages/count/neli12/time-series-productivity-sp"> <img src = "https://img.shields.io/github/license/neli12/time-series-productivity-sp?color=green"> <img src = "https://img.shields.io/github/watchers/neli12/time-series-productivity-sp?style=social">
 
-# Predição da produtividade da cana-de-açúcar nos municípios do Estado de São Paulo
+# Mapeamento da produtividade da cana-de-açúcar no Estado de São Paulo: aplicando análise de dados em painel e aprendizado de máquina
 
 Link do tutorial no youtube: https://www.youtube.com/watch?v=Od1_6oM1NXU&list=PLhpCzBIsNmgpH4vahrHl7ybSivwzhBRFN
 
